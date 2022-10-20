@@ -10,13 +10,9 @@ export class Task{
   @Column({length: 100, nullable: false})
   text: string;
 
-  @IsNotEmpty()
   @Column('boolean', {default: false})
   isDone: boolean;
 
   @UpdateDateColumn()
   date: Date;
-
-  @Column('date')
-  deadline: Date;
 }
