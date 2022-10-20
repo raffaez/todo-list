@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Task } from './task/entities/task.entity';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -9,7 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     username:'root',
     password:'root',
     database:'db_todo',
-    entities:[],
+    entities:[Task],
     synchronize: true
   })],
   controllers: [],
